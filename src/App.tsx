@@ -10,9 +10,9 @@ function App() {
         <Header  bgColor={'#e6e8e7'}></Header>
       </div>
       <div style={{display:'flex',flex:0.3,alignItems:'center', justifyContent:'center'}}>
-          <SimpleList pricesList={[10,20,50]}></SimpleList>
+          <SimpleList childComp={<img/>} pricesList={[10,20,50]}></SimpleList>
       </div>
-      <img height={100} width={100} src={Egg} />
+      
       
     </div>
   );
