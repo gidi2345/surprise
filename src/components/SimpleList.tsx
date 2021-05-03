@@ -15,11 +15,10 @@ const StyledPriceButtonsList: any = styled.div`
 `;
 
 export const SimpleList = (props: any ) => {
-    const { childComp, array } = props;
+    const { childComp, pricesList } = props;
         return (
         <StyledPriceButtonsList>
-            {[{image: Egg1, height:50, width:50},{image: Egg2, height:100, width:100},{image: Egg3, height:120, width:120}]
-            .map((item: any) => {return React.cloneElement(childComp, { height: item.height, width: item.width, src: item.image}) })}           
+            {pricesList.map((item: any) => { return React.cloneElement(childComp, { key:item.cssProperties.height, height: item.cssProperties.height, width: item.cssProperties.width, src: item.imageSrc, uuid: item.uuid})})}           
         </StyledPriceButtonsList>
         )
     }
