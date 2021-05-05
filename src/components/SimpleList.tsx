@@ -18,7 +18,7 @@ export const SimpleList = (props: any ) => {
     const { childComp, pricesList } = props;
         return (
         <StyledPriceButtonsList>
-            {pricesList.map((item: any) => { return React.cloneElement(childComp, { key:item.cssProperties.height, height: item.cssProperties.height, width: item.cssProperties.width, src: item.imageSrc, uuid: item.uuid})})}           
+            {pricesList.map((product: any) => { return React.cloneElement(childComp, { key: Math.random(), product})})}           
         </StyledPriceButtonsList>
         )
     }

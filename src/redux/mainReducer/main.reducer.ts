@@ -2,18 +2,8 @@ import MainActionTypes from './main.types';
 import Small_Egg from '../../assets/images/egg1.png';
 import Medium_Egg from '../../assets/images/egg2.png';
 import Big_Egg from '../../assets/images/egg3.png';
+import Product from '../../types/ProductI';
 
-interface CssProperties {
-    width: number;
-    height: number;
-}
-
-interface Product {
-    uuid: string;
-    price: number;
-    imageSrc: string;
-    cssProperties: CssProperties 
-}
 
 export interface INITIAL_STATE_TYPE {
     products: Product[];
