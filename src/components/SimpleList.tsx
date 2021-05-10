@@ -8,8 +8,8 @@ import Egg3 from '../assets/images/egg3.png';
 const StyledPriceButtonsList: any = styled.div`
     display: flex;
     height:400px;
-    width:600px;
-    justify-content: space-around;
+    width:50%;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
 `;

@@ -16,7 +16,7 @@ export const INITIAL_STATE: INITIAL_STATE_TYPE = {
         { uuid: 'install-uuid-egg2', price: 20, imageSrc: Medium_Egg, cssProperties: {width: 100, height: 100}},
         { uuid: 'install-uuid-egg3', price: 50, imageSrc: Big_Egg, cssProperties: {width: 120, height: 120}},
     ],
-    choosenProducts: { uuid: 'install-uuid-egg1', price: 10, imageSrc: Small_Egg, cssProperties: {width: 450, height: 450}}
+    choosenProducts: { uuid: 'install-uuid-egg1', price: 10, imageSrc: Small_Egg, cssProperties: {width: 250, height: 250}}
 };
 
 const mainReducer: any = (state: INITIAL_STATE_TYPE = INITIAL_STATE, action : any) => {
@@ -26,7 +26,7 @@ const mainReducer: any = (state: INITIAL_STATE_TYPE = INITIAL_STATE, action : an
         const product: Product | undefined = products.find((item: Product) => item.uuid === action.payload);
         return {
             ...state,
-            choosenProducts: product ? {...product, cssProperties: {width: 450, height: 450}} : choosenProducts
+            choosenProducts: product ? {...product, cssProperties: {width: 250, height: 250}} : choosenProducts
         }
         default:
             return state;
