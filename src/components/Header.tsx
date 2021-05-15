@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { isPropertySignature } from "typescript";
 import { device } from '../config/size';
 
 const StyledHeader: any = styled.div`

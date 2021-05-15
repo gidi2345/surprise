@@ -1,4 +1,4 @@
 export default interface CssProperties {
-    width: number;
-    height: number;
+    width: number | string;
+    height: number | string;
 }

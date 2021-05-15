@@ -2,13 +2,36 @@ import {Image} from './Image';
 import {PriceLabel} from './PriceLabel';
 import Product from '../types/ProductI'; 
 import styled  from 'styled-components';
+import { device } from '../config/size';
 
 const StyledImageAndPrice: any = styled.div`
     display: flex;
     flex-direction:column;
     align-items: center;
-    height: ${(props: any) => props.isBig ? '350px' : '200px'};
-    width: ${(props: any) => props.isBig ? '350px' : '200px'};
+    @media ${device.mobileS} { 
+        height: 100px;
+        width: 100px;
+      }
+      @media ${device.mobileM} { 
+        height: 100px;
+        width: 100px;
+      }
+      @media ${device.mobileL} { 
+        height: 100px;
+        width: 100px;
+      }
+    @media ${device.tablet} { 
+        height: 100px;
+        width: 100px;
+      }
+      @media ${device.laptopL} { 
+        height: 250px;
+        width: 250px;
+      } 
+      @media ${device.desktop} { 
+        height: 400px;
+        width: 400px;
+      }  
         border-radius: 10px;
         border-style: solid;
         border-width: 2px;
@@ -22,7 +45,8 @@ const StyledImageAndPrice: any = styled.div`
 
 const StyledImageContainer: any = styled.div`
     display: flex;
-    flex:0.7;
+    width:100%;
+    height:70%;
     justify-content:center;
     align-items: center;
     object-fit: fill;
@@ -30,6 +54,8 @@ const StyledImageContainer: any = styled.div`
 
 const StyledPriceContainer: any = styled.div`
     display: flex;
+    width:100%;
+    height:30%;
     flex:0.3;
     justify-content:center;
     align-items: center;

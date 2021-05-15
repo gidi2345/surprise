@@ -12,9 +12,9 @@ export interface INITIAL_STATE_TYPE {
 
 export const INITIAL_STATE: INITIAL_STATE_TYPE = {
     products: [
-        { uuid: 'install-uuid-egg1', price: 10, imageSrc: Small_Egg, cssProperties: {width: 70, height: 70}},
-        { uuid: 'install-uuid-egg2', price: 20, imageSrc: Medium_Egg, cssProperties: {width: 100, height: 100}},
-        { uuid: 'install-uuid-egg3', price: 50, imageSrc: Big_Egg, cssProperties: {width: 120, height: 120}},
+        { uuid: 'install-uuid-egg1', price: 10, imageSrc: Small_Egg, cssProperties: {width: '20%', height: '20%'}},
+        { uuid: 'install-uuid-egg2', price: 20, imageSrc: Medium_Egg, cssProperties: {width: '40%', height: '40%'}},
+        { uuid: 'install-uuid-egg3', price: 50, imageSrc: Big_Egg, cssProperties: {width: '60%', height: '60%'}},
     ],
     choosenProducts: { uuid: 'install-uuid-egg1', price: 10, imageSrc: Small_Egg, cssProperties: {width: 250, height: 250}}
 };
