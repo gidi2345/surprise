@@ -4,8 +4,8 @@ import { useDispatch, useSelector} from 'react-redux';
 import {INITIAL_STATE_TYPE} from '../src/redux/mainReducer/main.reducer';
 import { Image } from '../src/components/Image';
 import { ImageAndPrice } from '../src/components/ImageAndPrice';
-import StoriesPicturesComponent from "./components/StoriesPictures";
-import StoriesComponent from "./components/Stories";
+import StoriesPicturesComponent from "./components/stories/StoriesPictures";
+import StoriesComponent from "./components/stories/Stories";
 import  Paypal  from '../src/components/paypal/Paypal';
 
 const App = () => {

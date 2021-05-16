@@ -1,5 +1,5 @@
 import {useDispatch, useStore, useSelector} from "react-redux";
-import {INITIAL_STATE_TYPE} from '../redux/mainReducer/main.reducer';
+import {INITIAL_STATE_TYPE} from '../../redux/mainReducer/main.reducer';
 import StoriesComponent from './Stories';
 
 import './StoriesPictures.css';
