@@ -13,7 +13,6 @@ const StoriesComponent: any = () => {
     }
     const storiesSrc = ShowStories.map((a: any) => a.src);
 
-    console.log(storiesSrc);
     return(
         <Stories
             stories={storiesSrc}
