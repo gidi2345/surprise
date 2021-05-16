@@ -50,34 +50,6 @@ const mainReducer: any = (state: INITIAL_STATE_TYPE = INITIAL_STATE, action : an
         default:
             return state;
     }
-    console.log(state.stories);
 };
 
 export default mainReducer;
-
- //   <div style={{display:'flex', flexDirection: 'column'}}>
-    //       <div style={{display:'flex',flex:0.1, width:'100%'}}>
-    //           <Header  bgColor={'#e6e8e7'}></Header>
-    //       </div>
-    //       <StoriesPicturesComponent />
-    //       {/*<PayPalComponent></PayPalComponent>*/}
-    //       <div style={{display:'flex',flex:0.3,alignItems:'center', justifyContent:'center'}}>
-    //           {
-    //             showStories ?  
-    //             <div className="row align-items-center" style={{}}>
-    //                 <div className="row">
-    //                     <h2 className="col"  onClick={() => dispatch({type: 'TOGGLE_SHOWN_STORIES'})}>X</h2>        
-    //                     <div className="col">
-    //                         <StoriesComponent />
-    //                     </div>
-    //                 </div>
-    //             </div> :
-    //           <SimpleList childComp={<ImageAndPrice/> } pricesList={products}></SimpleList>
-                
-    //           }
-            
-    //       </div>
-    //       <div style={{display: 'flex', flex:0.4, justifyContent:'center', alignItems:'center'}}>
-    //           <ImageAndPrice product={choosenProducts}/>
-    //       </div>
-    //   </div>
