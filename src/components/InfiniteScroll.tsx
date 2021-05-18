@@ -1,9 +1,7 @@
 import InfiniteScroll from 'react-infinite-scroll-component';
 import React from 'react';
 import { useEffect, useState, useRef  } from 'react';
-import egg from '../assets/images/egg1.png';
 import LottieContainer from '../components/LottieContainer';
-import  lottie_animations from '../assets/lottie-files';
 
 interface InfiniteScrollCI {
     
@@ -13,6 +11,13 @@ enum JustifyContentEnum {
   'center',
   'space-between',
   'space-around'
+}
+
+enum AlignItemsEnum {
+  'center',
+  'flex-start',
+  'flex-end',
+  'stretch'
 }
 
 enum flexDirectionEnum {
@@ -28,10 +33,6 @@ enum BackgroundColoeEnum {
   'purple'
 }
 
-enum RenderOrNot {
-  true,
-  false
-}
 
 enum LottieFilePathEnum {
     'lottie_easter_egg_bunny',
@@ -48,19 +49,33 @@ const randomRangeToRange = (startRange : number, endRange: number ) => {
   return Math.floor(Math.random() * endRange) + startRange
 }
 
+const getEnumLength = (enumType: any): number => {
+  return Object.keys(enumType).length / 2;
+}
+
+const getRandomProperyValue = (enumType: any): any => {
+  return enumType[randomRange(getEnumLength(enumType))];
+}
+
+const randomBoolean = (): boolean => {
+  return Math.random() < 0.5;
+}
+
 const itemsGenerator = (numberOfItems: number) => {
   const scrollListItems = Array.from(Array(numberOfItems).keys()).map((i) => {
       const randomStyle = { 
          display:'flex',
-         justifyContent: JustifyContentEnum[randomRange(3)],
-         backgroundColor: BackgroundColoeEnum[randomRange(5)],
+         justifyContent: getRandomProperyValue(JustifyContentEnum),
+         alignItems: getRandomProperyValue(AlignItemsEnum),
+         backgroundColor: getRandomProperyValue(BackgroundColoeEnum),
          width: randomRangeToRange(100,500).toString() + 'px',
          height: randomRangeToRange(100,500).toString() + 'px'
         }
      return <div style={randomStyle}>
         {
-          RenderOrNot[randomRange(2)] ?   <LottieContainer animationDataPathName={LottieFilePathEnum[randomRange(4)]}></LottieContainer>: null
-         
+  
+          randomBoolean()  ?   <LottieContainer animationDataPathName={getRandomProperyValue(LottieFilePathEnum)}></LottieContainer>: 
+          <div style={{fontFamily: 'QuickSandMedium' , fontSize:randomRangeToRange(20,70)}}>Surprise Shop Is Here!</div>   
         }
      </div>
   });
@@ -77,7 +92,7 @@ export const InfiniteScrollC = (props: any) =>  {
     }); 
 
     const fetchMoreData = () => {
-        if (state.items.length >= 500) {
+        if (state.items.length >= 150) {
           setPostList({...state, hasMore: false })
           return;
         }

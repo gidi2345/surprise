@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {store} from "./redux/store";
+import './../src/assets/fonts/Quicksand-Medium.ttf'
 
 ReactDOM.render(
     <Provider store={store}>
