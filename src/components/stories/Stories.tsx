@@ -1,6 +1,6 @@
 import Stories from 'react-insta-stories';
 import {useDispatch, useSelector} from "react-redux";
-import {INITIAL_STATE_TYPE} from '../redux/mainReducer/main.reducer';
+import {INITIAL_STATE_TYPE} from '../../redux/mainReducer/main.reducer';
 
 const StoriesComponent: any = () => {
     const dispatch = useDispatch();
@@ -13,7 +13,6 @@ const StoriesComponent: any = () => {
     }
     const storiesSrc = ShowStories.map((a: any) => a.src);
 
-    console.log(storiesSrc);
     return(
         <Stories
             stories={storiesSrc}

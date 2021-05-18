@@ -2,11 +2,13 @@ import './App.css';
 import {Header, InfiniteList, InfiniteScrollC} from './components/';
 import {useDispatch, useSelector} from 'react-redux';
 import {INITIAL_STATE_TYPE} from '../src/redux/mainReducer/main.reducer';
-import StoriesPicturesComponent from "./components/StoriesPictures";
-import StoriesComponent from "./components/Stories";
 import Paypal from '../src/components/paypal/Paypal';
 import {ScrollableLayout} from '../src/components/ScrollableLayout';
 import ChooseEgg from './components/compositeComponents/ChooseEgg';
+import { Image } from '../src/components/Image';
+import { ImageAndPrice } from '../src/components/ImageAndPrice';
+import StoriesPicturesComponent from "./components/stories/StoriesPictures";
+import StoriesComponent from "./components/stories/Stories";
 
 const App = () => {
     const {products, choosenProducts, showStories} = useSelector((state: INITIAL_STATE_TYPE) => state);
@@ -16,10 +18,10 @@ const App = () => {
         <div style={{height: window.outerHeight, width: window.outerWidth, display: 'flex',flex:1, flexDirection: 'row'}}>
           <div style={{display: 'flex',flex:0.7, flexDirection: 'column'}}>
            <div style={{display: 'flex', flex: 0.3, width: '100%', height: '4vh', position: 'fixed', flexDirection:'column'}}>
-                    <Header bgColor={'blue'}></Header>         
+                    <Header bgColor={'blue'}></Header>
           </div>
           <StoriesPicturesComponent/>
-            <div style={{display: 'flex', flexDirection: 'column', flex: 0.5}}>    
+            <div style={{display: 'flex', flexDirection: 'column', flex: 0.5}}>
                 <div style={{display: 'flex', flex: 0.3, alignItems: 'center', justifyContent: 'center'}}>
                     {
                         showStories ?
@@ -43,6 +45,7 @@ const App = () => {
             </div>
     )
 }
+
 export default App;
 
 
